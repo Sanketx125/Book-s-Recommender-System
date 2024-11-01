@@ -14,7 +14,7 @@
         color: whitesmoke;
       }
       .card {
-        height: 580px; /* Fixed height for cards */
+        height: 530px; /* Fixed height for cards */
         overflow: hidden; /* Hide overflow content */
       }
       .card-body h3, .card-body h5 {
@@ -25,15 +25,16 @@
 
   <body style="background-color: rgb(24, 23, 23);">
 
+<!-- Inside index.html and search.html -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
       <a class="navbar-brand">
         <img src="https://cdn.pixabay.com/photo/2016/09/16/09/20/books-1673578_1280.png" height="50" alt="Books">
-        <u><b>Book Recommender System</b></u>
+        <big><u><i><b>Book Recommender System</b></i></u></big>
       </a>
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#"><b>Home</b></a></li>
-        <li class="nav-item"><a class="nav-link" href="#"><b>Recommend</b></a></li>
+        <li class="nav-item"><a class="nav-link" href="/"><b>Home</b></a></li>
+        <li class="nav-item"><a class="nav-link" href="/recommend"><b>Recommend</b></a></li>
         <li class="nav-item"><a class="nav-link" href="#"><b>Contact</b></a></li>
       </ul>
     </nav>
@@ -45,75 +46,24 @@
               <h2 class="test-white" style="font-size: 30px;">Top 50 Books</h2>
             </div>
 
-            <!-- Book Cards (5 per row) -->
-            <div class="col-md-2" style="margin-top: 20px;">
-                <div class="card">
-                    <img class="card-img-top" src="http://images.amazon.com/images/P/0439136350.01.MZZZZZZZ.jpg" alt="Harry Potter Book Cover">
-                    <div class="card-body">
-                        <h3>Harry Potter and the Prisoner of Azkaban (Book 3)</h3>
-                        <h5>Author: J.K. Rowling</h5>
-                        <h5>Rating: 5.6</h5>
+            {% for i in range(book_name | length) %}
+                <!-- Book Cards (5 per row) -->
+                <div class="col-md-2" style="margin-top: 20px;">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ image[i] }}" alt="{{ book_name[i] }} Book Cover">
+                        <div class="card-body">
+                            <big><b>{{ book_name[i] }}</b></big>
+                            <hr>
+                            <pr><small><small>
+                            <tex>Author : {{ author[i] }}<br>
+                                Rating : {{ avg_rating[i] }}
+                            </small></small>
+                            </pr>
+                            <!-- <p>Rating: {{ book_rating[i] }}</p> -->
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-2" style="margin-top: 20px;">
-                <div class="card">
-                    <img class="card-img-top" src="http://images.amazon.com/images/P/0439136350.01.MZZZZZZZ.jpg" alt="Harry Potter Book Cover">
-                    <div class="card-body">
-                        <h3>Harry Potter and the Prisoner of Azkaban (Book 3)</h3>
-                        <h5>Author: J.K. Rowling</h5>
-                        <h5>Rating: 5.6</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-2" style="margin-top: 20px;">
-                <div class="card">
-                    <img class="card-img-top" src="http://images.amazon.com/images/P/0439136350.01.MZZZZZZZ.jpg" alt="Harry Potter Book Cover">
-                    <div class="card-body">
-                        <h3>Harry Potter and the Prisoner of Azkaban (Book 3)</h3>
-                        <h5>Author: J.K. Rowling</h5>
-                        <h5>Rating: 5.6</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-2" style="margin-top: 20px;">
-                <div class="card">
-                    <img class="card-img-top" src="http://images.amazon.com/images/P/0439136350.01.MZZZZZZZ.jpg" alt="Harry Potter Book Cover">
-                    <div class="card-body">
-                        <h3>Harry Potter and the Prisoner of Azkaban (Book 3)</h3>
-                        <h5>Author: J.K. Rowling</h5>
-                        <h5>Rating: 5.6</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-2" style="margin-top: 20px;">
-                <div class="card">
-                    <img class="card-img-top" src="http://images.amazon.com/images/P/0439136350.01.MZZZZZZZ.jpg" alt="Harry Potter Book Cover">
-                    <div class="card-body">
-                        <h3>Harry Potter and the Prisoner of Azkaban (Book 3)</h3>
-                        <h5>Author: J.K. Rowling</h5>
-                        <h5>Rating: 5.6</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-2" style="margin-top: 20px;">
-                <div class="card">
-                    <img class="card-img-top" src="http://images.amazon.com/images/P/0439136350.01.MZZZZZZZ.jpg" alt="Harry Potter Book Cover">
-                    <div class="card-body">
-                        <h3>Harry Potter and the Prisoner of Azkaban (Book 3)</h3>
-                        <h5>Author: J.K. Rowling</h5>
-                        <h5>Rating: 5.6</h5>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Repeat more cards as needed -->
-
+            {% endfor %}
         </div>
     </div>
 
