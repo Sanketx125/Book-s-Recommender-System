@@ -42,7 +42,7 @@ Clone the Repository:
 sh
 
 Copy
-git clone https://github.com/Sanketx125/book-recommendation-system.git
+git clone [https://github.com/Sanketx125/book-recommendation-system.git](https://github.com/Sanketx125/Book-s-Recommender-System.git)
 cd book-recommendation-system
 Set Up the Environment: Ensure you have Python and necessary libraries installed.
 
