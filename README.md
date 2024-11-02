@@ -42,7 +42,7 @@ Clone the Repository:
 sh
 
 Copy
-git clone https://github.com/yourusername/book-recommendation-system.git
+git clone https://github.com/Sanketx125/book-recommendation-system.git
 cd book-recommendation-system
 Set Up the Environment: Ensure you have Python and necessary libraries installed.
 
@@ -59,7 +59,7 @@ python app.py
 Access the Application: Open your web browser and navigate to http://127.0.0.1:5000/
 
 📞 Contact
-For any questions or feedback, please feel free to contact us at your-emai@example.com.
+For any questions or feedback, please feel free to contact us at sanketx125@gmail.com.
 
 🛡️ License
 This project is licensed under the MIT License. See the LICENSE file for more details.
