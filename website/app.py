@@ -55,7 +55,8 @@ def recommend():
     # If GET request is made, show an empty search form or redirect
     return render_template('search.html', data=[])
 
-@app.route('/contact')
+
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
     return render_template('contact.html')
 
